@@ -1,0 +1,3 @@
+[workdir.cmd_exception]
+dirpath = "."
+cmd = "aaaaa"
