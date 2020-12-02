@@ -47,7 +47,8 @@ class WorkDir:
     def __listdir__(self):
         sys.stdout.write(
             f'workdir[{green(self.name)}] {len(self.dirpath_candidates)} directory paths\n')
-        for dir in self.dirpath_candidates:
+        sorted_dirpath = sorted(self.dirpath_candidates)
+        for dir in sorted_dirpath:
             sys.stdout.write(f'{dir}\n')
 
     def execute(self, mode):

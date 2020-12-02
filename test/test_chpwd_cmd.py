@@ -93,6 +93,6 @@ class TestChpwdCmd:
         assert_equal(
             lines[4], f"workdir[{green('wildcard')}] 2 directory paths")
         assert_equal(
-            lines[5], f"{self.cwd}/test/testdir/dir2")
+            lines[5], f"{self.cwd}/test/testdir/dir1")
         assert_equal(
-            lines[6], f"{self.cwd}/test/testdir/dir1")
+            lines[6], f"{self.cwd}/test/testdir/dir2")
