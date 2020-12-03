@@ -1,0 +1,11 @@
+[workdir.test]
+dirpath = "{CHPWD_CMD_DIR}"
+cmd = "pwd"
+
+[workdir.test_home_dir]
+dirpath = "~"
+cmd = "pwd"
+
+[workdir.wildcard]
+dirpath = "{CHPWD_CMD_DIR}/test/testdir/*"
+cmd = "pwd"
