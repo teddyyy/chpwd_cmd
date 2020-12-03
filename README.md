@@ -66,6 +66,11 @@ You can list the directories for execution. It is useful if you specify the dire
 chpwd_cmd -m listdir
 ```
 
+## How to test
+```
+make test
+```
+
 ## License
 
 - MIT License
