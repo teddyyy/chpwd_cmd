@@ -6,8 +6,8 @@ from chpwd_cmd.arguments import Arguments, ArgumentsError
 
 def main():
     try:
-        workdirs = ConfigFile().config['workdir']
         args = Arguments().get()
+        workdirs = ConfigFile().config['workdir']
     except ConfigFileError:
         sys.exit()
     except ArgumentsError:
