@@ -24,7 +24,7 @@ class WorkDir:
         self.enable = True if cwd in self.dirpath_candidates else False
         self.cwd = cwd
 
-    def __execute__(self):
+    def __execute(self):
         try:
             subproc.run(self.cmd, cwd=self.cwd, shell=True, check=True)
         except subproc.CalledProcessError as e:
@@ -36,7 +36,7 @@ class WorkDir:
         sys.stdout.write(
             f'{green(self.cmd)} in workdir[{green(self.name)}] executed by chpwd_cmd\n')
 
-    def __dryrun__(self):
+    def __dryrun(self):
         if self.enable:
             sys.stdout.write(
                 f'{green(self.cmd)} in workdir[{green(self.name)}] execute\n')
@@ -44,7 +44,7 @@ class WorkDir:
             sys.stdout.write(
                 f'{red(self.cmd)} in workdir[{red(self.name)}] not execute\n')
 
-    def __listdir__(self):
+    def __listdir(self):
         sys.stdout.write(
             f'workdir[{green(self.name)}] {len(self.dirpath_candidates)} directory paths\n')
         sorted_dirpath = sorted(self.dirpath_candidates)
@@ -53,11 +53,11 @@ class WorkDir:
 
     def execute(self, mode):
         if self.enable and mode == 'exec':
-            self.__execute__()
+            self.__execute()
         elif mode == 'dryrun':
-            self.__dryrun__()
+            self.__dryrun()
         elif mode == 'listdir':
-            self.__listdir__()
+            self.__listdir()
 
 
 class WorkDirInvalid(Exception):
