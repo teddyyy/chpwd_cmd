@@ -52,6 +52,23 @@ If you specify a directory path in `exec` mode, chpwd_cmd execute it. The defaul
 ```
 chpwd_cmd -m exec -c $HOME
 ```
+If you are using zsh, you will be able to call it as follows.
+
+Adding to your .zshrc file.
+```
+function chpwd() {
+  chpwd_cmd -c $PWD
+}
+```
+
+If you are using fish, you will be able to call it as follows.
+
+Adding to your ~/.config/fish/config.fish file.
+```
+function chpwd --on-variable PWD
+  chpwd_cmd -c $PWD
+end
+```
 
 ### Dryrun
 It is recommended to do a `dryrun` before running the mode `exec`.
