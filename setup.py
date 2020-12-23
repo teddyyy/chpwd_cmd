@@ -8,7 +8,7 @@ with open('README.md') as readme:
 
 setup(
     name='chpwd_cmd',
-    version='0.0.1',
+    version='0.0.2',
     description='Execute the commands in the configuration file according to the current working directory.',
     author_email='teddy@sfc.wide.ad.jp',
     long_description=long_description,
